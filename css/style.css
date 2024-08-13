@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body {
+    font-family: Verdana;
+    padding-top: 120px;
+    background-color: #acaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Menambahkan transisi untuk transformasi */
+    transform: scale(0.9); /* Mengatur skala awal elemen */
+    opacity: 0.8; /* Menyesuaikan kecerahan elemen */
+}
+
+.login:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1); /* Meningkatkan skala ketika dihover */
+    opacity: 1; /* Mengembalikan kecerahan saat dihover */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box-header {
+    padding: 16px;
+    background-color: #f2f2f2;
+}
+
+.box-body {
+    padding: 16px;
+}
+
+.box-footer {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+
+.form-grup {
+    margin-bottom: 15px;
+}
+
+.form-grup label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-grup .input-control {
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    width: 370px;
+    font-size: 16px;
+}
+
+.box-login {
+    width: 400px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.alert {
+    padding: 10px 16px;
+    border: 1px solid;
+}
+
+.alert-error {
+    background-color: #FABEC0;
+    border: 1px solid #E43D40;
+    color: #E43D40;
+}
+
+.alert-success {
+    background-color: #AAF0D1;
+    border: 1px solid #3EB489;
+    color: #3EB489;
+}
+
+.bg-light {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    padding-left: 80px;
+}
+
+.container {
+    width: 17%;
+    height: 100%;
+    background-color: #ebc700;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:1px;
+}
+
+.navbar {
+    font-family: Times;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar a {
+    color: rgb(51, 55, 59);
+}
+
+.nav-brand {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+    /* Menambahkan jarak vertikal antara item menu */
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-menu li .dropdown {
+    list-style: none;
+    display: none;
+    min-width: 113%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 135, 145, 0.2);
+    z-index: 1;
+}
+.nav-menu li .dropdown a {
+    color: rgb(0, 0, 0);
+}
+
+.nav-menu li .dropdown li:hover a {
+    color: #797373;
+}
+
+.nav-menu li:hover .dropdown {
+    display: block;
+}
+
+li a, .fa fa-caret-down {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
+.fa fa-caret-down{
+    padding-top: 50%;
+}
+/* Animation */
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.box {
+    border: 2px solid #ddd;
+}
+.footer {
+    background-color: #b5d8fc;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.social-icons {
+    margin-top: 20px;
+}
+  
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+  
+.container1 {
+    max-width: 98%;
+    padding: 70px 0px 50px 230px;
+}
+
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+    width: 100%;
+}
+.container1::after {
+    content: "";
+    clear: both;
+    display: block;
+    margin-top: 0px;
+}
+.container-utama {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px 40px 10px;
+}
+
+.container-utama::after {
+    content: "";
+    clear: both;
+    display: block;
+    margin-top: 0px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    padding: 10px;
+}
+
+td:first-child {
+    width: 50px;
+    text-align: center;
+}
+
+td:last-child {
+    width: 150px;
+    text-align: center;
+}
+/* Gaya untuk baris data */
+.table tbody tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+
+/* Gaya untuk judul kolom */
+.table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Gaya untuk sel data */
+.table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Gaya untuk sel aksi */
+.table td a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Gaya untuk pesan ketika data tidak ada */
+.table tbody tr.no-data td {
+    text-align: center;
+    font-style: italic;
+}
+.input-grup:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.input-grup input[type="text"] {
+    width: 26%;
+    padding: 14px;
+    font-size: 15px;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.input-grup input[type="text"]:focus {
+    outline: none;
+}
+
+.input-grup input[type="date"] {
+    width: 11%;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 17px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.input-grup button {
+    width: 14%;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 18px;
+}
+.image {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.header {
+    background: #4682b4;
+}
+
+.header a {
+    color: #ffffff; /* Putih untuk tulisan */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: bold;
+    text-decoration: none; /* Untuk menghilangkan garis bawah pada tautan */
+}
+
+.header a:hover {
+    color: rgb(75, 70, 70); /* Warna ungu untuk efek hover */
+}
+
+.header-logo {
+    float: left;
+    line-height: 70px;
+}
+
+.header-logo img {
+    float: left;
+    margin-right: 10px;
+}
+
+.header-logo h2 {
+    float: left;
+}
+
+.header-menu {
+    margin-right: 90px ;
+    float: right;
+    
+}
+
+.header-menu li {
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    padding: 20px 10px;
+}
+
+.banner {
+    border: 1px solid;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.text {
+    padding: 10px 120px 40px 120px;
+    background-color: rgb(0, 0, 0, .4);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.section {
+    padding: 20px 0;
+}
+.line {
+    position: relative; /* Menetapkan posisi relatif untuk pseudo-element */
+    text-decoration: underline rgba(70, 130, 180, 1) 5px;
+    text-underline-offset: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+.section img {
+    margin-bottom: 10px;
+}
+
+.section h4 {
+    margin-bottom: 20px;
+}
+
+.col-4 {
+    padding: 10px;
+    min-height: 200px;
+    width: 25%;
+    float: left;
+}
+
+.thumbnaill-box {
+    border: 1px solid #4682b4;
+    min-height: 200px;
+    background: #4682b4;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-weight: bold;
+    padding: 10px; /* Tambahkan padding untuk memberikan ruang di sekitar konten */
+    color: white; /* Warna teks */
+}
+/* Memberikan sedikit efek bayangan untuk menonjolkan kotak */
+.thumbnail-box:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnaill-img {
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Sesuaikan dengan tinggi banner yang diinginkan untuk tampilan mobile */
+    text-align: center;
+}
+
+.thumbnaill-text {
+    min-height: 55px;
+    padding: 5px;
+}
+
+.thumbnaill-link {
+    color: #d9dddc
+}
+
+.thumbnaill-link:hover {
+    color: #000000;
+}
+
+#frame {
+    background: #f5f5f5;
+}
+
+#lensa {
+    background: #f5f5f5;
+}
+
+#informasi {
+    background: #f5f5f5;
+}
+
+footer {
+    padding: 40px;
+    background: #0C2D48;
+    color: white;
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-qty {
+    padding: 2px 4px; /* Padding yang sangat kecil */
+    font-size: 20px; /* Ukuran font yang sangat kecil */
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none;
+    border-radius: 3px; /* Border-radius yang sangat kecil */
+    cursor: pointer;
+    outline: none;
+}
+
+.input-qty {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-qty[readonly] {
+    background-color: #f8f9fa; /* Warna latar belakang input saat readonly */
+}
+
+.box-gmaps {
+    float: left;
+    width: 75%;
+}
+.produk {
+    display: inline-block;
+    vertical-align: top; /* Agar berada sejajar dengan bagian atas gambar */
+    margin-left: 30px;
+    margin-right: 10px;
+    font-size: x-large;
+    padding-top: 10px;
+}
+
+
+.mobile-menu-btn {
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.box-menu-mobile {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .7);
+    z-index: 9999;
+}
+
+.box-menu-mobile span {
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.ul {
+    margin-top: 50px;
+}
+
+.box-menu-mobile ul li a {
+    padding: 10px;
+    display: inline-block;
+    color: white;
+}
+.header menu .dropdown a {
+    color: #ffffff;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #000000;
+    padding: 3px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-caret-down{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.dropdown:hover .dropdown-utama {
+    display: block;
+}
+
+.dropdown-utama {
+    display: none;
+    position: absolute;
+    min-width: 210px;
+    background-color: rgb(96, 103, 207);
+    box-shadow: 0px 8px 16px 0px rgba(71, 83, 255, 0.2);
+    z-index:1;
+}
+
+.dropdown-utama li {
+    display: block;
+    padding: 3px; /* Sesuaikan nilai padding di sini */
+}
+
+.dropdown-utama li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+/* CSS untuk box menu mobile */
+.box-menu-mobile {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+.box-menu-mobile span {
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.box-menu-mobile ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.box-menu-mobile ul li {
+    margin-bottom: 10px;
+}
+
+.box-menu-mobile ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+}
+/* CSS untuk responsifitas menu mobile */
+@media screen and (max-width: 689px) {
+    .container,
+    .container1 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .col-4 {
+        width: 50%;
+    }
+
+    .thumbnaill-text {
+        font-size: 14px;
+    }
+    .thumbnaill-img {
+        background-size: cover;
+        background-position: center;
+        height: 100px; /* Sesuaikan dengan tinggi banner yang diinginkan untuk tampilan mobile */
+        text-align: center;
+        padding: 20px; /* Sesuaikan dengan jarak yang diinginkan */
+    }
+    .body {
+      background: #e2e2e2c4;
+      background-size: cover;
+    }
+  
+     /* Aturan banner untuk tampilan mobile */
+     .banner {
+        background-size: cover;
+        background-position: center;
+        height: 200px; /* Sesuaikan dengan tinggi banner yang diinginkan untuk tampilan mobile */
+        padding: 20px; /* Sesuaikan dengan jarak yang diinginkan */
+    }
+    .banner .text {
+        position: absolute;
+        height: 70px;  /* Sesuaikan dengan posisi teks pada banner */
+        padding-left: 10px;
+        right: 0;
+        font-size: 9px;
+    }
+    .nav-menu {
+        padding: 2px;
+        position: fixed;
+    }
+
+    .header-menu {
+        display: none; /* Sembunyikan menu utama pada perangkat mobile */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .box-menu-mobile ul {
+        padding: 0;
+    }
+
+    .box-menu-mobile ul li {
+        text-align: center;
+    }
+
+    .box-menu-mobile ul li a {
+        padding: 10px;
+    }
+
+    .header-menu li {
+        text-align: center; /* Pusatkan teks menu pada perangkat mobile */
+        padding: 10px 0;
+    }
+
+    .header-logo {
+        line-height: 40px;
+    }
+
+    .header-logo img {
+        width: 36px;
+    }
+
+    .header-logo h2 {
+        font-size: 12px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+    .box-menu-mobile ul li a {
+        padding: 10px;
+        display: block; /* Membuat item menu tampil sebagai blok agar dapat di-klik lebih mudah pada perangkat mobile */
+        text-align: center; /* Pusatkan teks menu pada perangkat mobile */
+        color: white;
+    }
+    .header menu .dropdown a {
+        color: #ffffff;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown a {
+        margin-top: 0;
+        text-decoration: none;
+        color: #000000;
+        display: block; /* Membuat item menu tampil sebagai blok agar dapat di-klik lebih mudah pada perangkat mobile */
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown-utama {
+        margin: 0;
+        display: none;
+        position: relative; /* Ubah posisi menjadi relatif untuk tata letak dropdown pada perangkat mobile */
+        background-color: #000000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        z-index: 1;
+    }
+    
+    .dropdown-utama li {
+        display: block;
+        padding: 10px 0; /* Sesuaikan nilai padding di sini */
+        text-align: center; /* Pusatkan teks menu pada perangkat mobile */
+    }
+
+    .dropdown-utama li a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+    }
+    .box{
+        min-width: 170;
+    }
+    .box-menu-mobile ul li a {
+        padding: 10px;
+        display: inline-block;
+        color: white;
+    }
+    .box-login{
+        width:300px;
+    }
+    .login .box-login input[type="text"]{
+        width:265px;
+    }
+    .login .box-login input[type="password"] {
+        width:265px;
+    }
+    .produk {
+        display: block; /* Mengubah tampilan menjadi blok agar memenuhi lebar perangkat */
+        margin-left: 0; /* Menghilangkan margin kiri */
+        padding-top: 0; /* Menghilangkan padding atas */
+        font-size: medium; /* Mengubah ukuran font ke ukuran yang lebih kecil */
+    }
+    .input-grup {
+        flex-direction: column;
+    }
+
+    .input-grup input[type="text"],
+    .input-grup input[type="date"],
+    .input-grup button {
+        width: 100%;
+    }
+    .btn{
+        font-size: 10px; 
+    }
+    .table th,
+    .table td {
+        width: 100%;
+        font-size: 6px; /* Mengatur ukuran font menjadi lebih kecil */
+    }
+
+    /* Gaya untuk baris data */
+    .table tbody tr:nth-of-type(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Gaya untuk judul kolom */
+    .table th {
+        background-color: #f8f9fa;
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        padding: 8px;
+    }
+
+    /* Gaya untuk sel data */
+    .table td {
+        padding: 5px;
+        border: 1px solid #ddd;
+    }
+
+    /* Gaya untuk sel aksi */
+    .table td a {
+        color: blue;
+        text-decoration: none;
+    }
+
+    /* Gaya untuk pesan ketika data tidak ada */
+    .table tbody tr.no-data td {
+        text-align: center;
+        font-style: italic;
+    }
+
+    .container {
+        width: 50%; /* Full width for smaller screens */
+        background-color: #ebc700;
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px; /* Adjusted padding for smaller screens */
+        font-size: 10px; /* Adjusted font size for smaller screens */
+    }
+    
+    .nav-brand {
+        padding: 10px; /* Adjusted padding for smaller screens */
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-brand a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+
+    .nav-menu li .dropdown {
+        min-width: 100%; /* Full width for dropdown on smaller screens */
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown a {
+        text-decoration: none;
+        color: #000000f3;
+        padding: 5px;
+        margin-top: 10px;
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+        justify-content: left;
+    }
+    /* Gaya dasar untuk tabel */
+    .horizontal {
+        overflow-x: auto;
+      }
+      
+      .horizontal{
+        width: 100%;
+        white-space: nowrap;
+      }
+      
+      .horizontal th,
+      .horizontal td {
+        padding: 8px;
+        text-align: left;
+      }
+      
+}
